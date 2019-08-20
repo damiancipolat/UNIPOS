@@ -29,6 +29,9 @@ drop table if exists [Tipo_usuario];
 drop table if exists Cliente;
 drop table if exists Empleado;
 drop table if exists IntegridadV;
+drop table if exists Diccionario_idioma;
+drop table if exists Diccionario_palabra;
+drop table if exists Diccionario_base;
 
 -- Creacion de tablas
 CREATE TABLE [Color]
@@ -215,7 +218,7 @@ CREATE TABLE [oferta_firmas]
 )
 GO
 
-CREATE TABLE bitacora
+CREATE TABLE Bitacora
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
 	[Type] bigint NULL,
@@ -299,5 +302,28 @@ CREATE TABLE [IntegridadV]
 	[Idtabla] varchar(50) NULL,
 	[Nombre] varchar(50) NULL,
 	[DVV] text NULL
+)
+GO
+
+create table Diccionario_base
+(
+	Id		 bigint NOT NULL identity(1,1) primary key,
+	IdIdioma bigint NOT NULL,
+	[key]	 varchar(50),
+	valor	 varchar(100)
+)
+GO
+
+create table Diccionario_palabra
+(
+	Id    bigint NOT NULL identity(1,1) primary key,
+	[key] varchar(50) NULL
+)
+GO
+
+create table Diccionario_idioma
+(
+	Id bigint NOT NULL identity(1,1) primary key,
+	[descrip]	varchar(50) NULL
 )
 GO
