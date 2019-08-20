@@ -52,8 +52,8 @@ namespace DAL
                 mDao.CreateParameter("document", SqlDbType.VarChar, pUsuario.Document),
                 mDao.CreateParameter("pwd", SqlDbType.VarChar, pUsuario.Password),
                 mDao.CreateParameter("tipoUser", SqlDbType.VarChar, pUsuario.tipo),
-                mDao.CreateParameter("activo", SqlDbType.VarChar, pUsuario.activo),
-                mDao.CreateParameter("fecha", SqlDbType.DateTime, pUsuario.fecAlta)
+                mDao.CreateParameter("activo", SqlDbType.VarChar, "true"),
+                mDao.CreateParameter("fecha", SqlDbType.DateTime, new DateTime())
             });
         }
 

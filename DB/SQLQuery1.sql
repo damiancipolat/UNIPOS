@@ -294,6 +294,8 @@ CREATE TABLE [Usuario]
 )
 GO
 
+
+
 CREATE TABLE [Cliente]
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
@@ -344,5 +346,27 @@ create table Diccionario_idioma
 (
 	Id bigint NOT NULL identity(1,1) primary key,
 	[descrip]	varchar(50) NULL
+)
+GO
+
+
+CREATE TABLE [Permiso]
+(
+	[Idpermiso] bigint NOT NULL,
+	[descript] varchar(50) NULL
+)
+GO
+
+CREATE TABLE [Permiso_jerarq]
+(
+	[Idpadre] bigint NULL,
+	[Idhijo] bigint NULL
+)
+GO
+
+CREATE TABLE [Usuario_permiso]
+(
+	[IdUsuario] bigint NULL,
+	[Idpermiso] bigint NULL
 )
 GO
