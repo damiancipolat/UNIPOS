@@ -24,8 +24,6 @@ drop table if exists sesion;
 drop table if exists [Limites_fidelizacion];
 drop table if exists Usuario;
 drop table if exists [Tipo_usuario];
-drop table if exists Empleado.cliente;
-drop table if exists [Tipo_usuario];
 drop table if exists Cliente;
 drop table if exists Empleado;
 drop table if exists IntegridadV;
@@ -281,19 +279,40 @@ GO
 CREATE TABLE [Tipo_usuario]
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
-	[descrip] varchar(50) NULL,
-	[estado] varchar(50) NULL
+	[descrip] varchar(50) NULL
 )
 GO
 
 CREATE TABLE [Usuario]
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
-	[nombre] varchar(50) NULL,
-	[apellido] varchar(50) NULL,
-	[fec_nac] date NULL,
+	document varchar(20),
+	pwd varchar(100),
 	[tipo_usuario] bigint NULL,
-	[estado] varchar(50) NULL
+	[activo] varchar(50) NULL,
+	fecha_alta datetime
+)
+GO
+
+CREATE TABLE [Cliente]
+(
+	Id bigint not NULL identity(1,1) PRIMARY KEY,
+	usuario_id varchar(20),
+	nombre varchar(100),
+	apellido varchar(100),
+	email varchar(100),
+	tel varchar(100)
+)
+GO
+
+CREATE TABLE Empleado
+(
+	Id bigint not NULL identity(1,1) PRIMARY KEY,
+	usuario_id varchar(20),
+	nombre varchar(100),
+	apellido varchar(100),
+	email varchar(100),
+	fec_nac varchar(100)
 )
 GO
 

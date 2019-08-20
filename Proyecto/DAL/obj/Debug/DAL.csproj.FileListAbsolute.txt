@@ -4,3 +4,6 @@ C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\bin\Debug\DAL.
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\bin\Debug\DAL.pdb
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\obj\Debug\DAL.dll
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\obj\Debug\DAL.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\bin\Debug\BE.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\bin\Debug\BE.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\DAL\obj\Debug\DAL.csproj.CopyComplete

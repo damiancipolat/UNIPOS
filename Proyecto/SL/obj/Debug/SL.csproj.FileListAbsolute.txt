@@ -1,6 +1,5 @@
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\bin\Debug\SL.dll
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\bin\Debug\SL.pdb
-C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\obj\Debug\SL.csprojAssemblyReference.cache
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\obj\Debug\SL.csproj.CoreCompileInputs.cache
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\obj\Debug\SL.dll
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\SL\obj\Debug\SL.pdb
