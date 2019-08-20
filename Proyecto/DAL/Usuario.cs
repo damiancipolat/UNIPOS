@@ -9,9 +9,7 @@ using System.Data.SqlClient;
 namespace DAL
 {
     class Usuario
-    {
-        static int mId;
-        
+    {        
         public static BE.Usuario Obtener(int pId)
         {
             string mCommandText = "select id,document,tipo_usuario,activo,fecha_alta from usuario where id="+pId+";";
@@ -50,14 +48,28 @@ namespace DAL
 
             DAO mDao = new DAO();
 
-            List<SqlParameter> list = new List<SqlParameter>();
-            list.Add(mDao.CreateParameter("document", SqlDbType.VarChar, pUsuario.Document));
-            list.Add(mDao.CreateParameter("pwd", SqlDbType.VarChar, pUsuario.Password));
-            list.Add(mDao.CreateParameter("tipoUser", SqlDbType.VarChar, pUsuario.tipo));
-            list.Add(mDao.CreateParameter("activo", SqlDbType.VarChar, pUsuario.activo));
-            list.Add(mDao.CreateParameter("fecha", SqlDbType.DateTime, pUsuario.fecAlta));
+            return mDao.ExecuteNonQueryWithParams(sql, new List<SqlParameter> {
+                mDao.CreateParameter("document", SqlDbType.VarChar, pUsuario.Document),
+                mDao.CreateParameter("pwd", SqlDbType.VarChar, pUsuario.Password),
+                mDao.CreateParameter("tipoUser", SqlDbType.VarChar, pUsuario.tipo),
+                mDao.CreateParameter("activo", SqlDbType.VarChar, pUsuario.activo),
+                mDao.CreateParameter("fecha", SqlDbType.DateTime, pUsuario.fecAlta)
+            });
+        }
 
-            return mDao.ExecuteNonQueryWithParams(sql, list);
+        public static int Actualizar(BE.Usuario pUsuario)
+        {
+            string sql = "update usuario set pwd=@pwd,document=@document,tipo_usuario=@tipoUser,activo=@activo,fecha_alta=@fecha where id = @id;";
+
+            DAO mDao = new DAO();
+
+            return mDao.ExecuteNonQueryWithParams(sql, new List<SqlParameter> {
+                mDao.CreateParameter("document", SqlDbType.VarChar, pUsuario.Document),
+                mDao.CreateParameter("pwd", SqlDbType.VarChar, pUsuario.Password),
+                mDao.CreateParameter("tipoUser", SqlDbType.VarChar, pUsuario.tipo),
+                mDao.CreateParameter("activo", SqlDbType.VarChar, pUsuario.activo),
+                mDao.CreateParameter("fecha", SqlDbType.DateTime, pUsuario.fecAlta)
+            });
         }
 
     }
