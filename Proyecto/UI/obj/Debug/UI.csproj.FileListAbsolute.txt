@@ -1,0 +1,9 @@
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\UI.exe.config
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\UI.exe
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\UI.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.exe
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.pdb

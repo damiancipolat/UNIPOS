@@ -1,0 +1,6 @@
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\bin\Debug\BE.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\bin\Debug\BE.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\obj\Debug\BE.csprojAssemblyReference.cache
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\obj\Debug\BE.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BE\obj\Debug\BE.pdb
