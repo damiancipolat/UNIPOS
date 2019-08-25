@@ -4,21 +4,21 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Articulo{
+	public class ArticuloBE{
 
         public int id;
-        public Color color;
-		public Categoria categoria;
-		public Marca marca;
-		public Proveedor proveedor;
+        public ColorBE color;
+		public CategoriaBE categoria;
+		public MarcaBE marca;
+		public ProveedorBE proveedor;
 		public float precioVenta;
 		public string descrip;
 		public string lote;
 		public int stock;
-		private List<Imagen> imagenes;
+		private List<ImagenBE> imagenes;
 		public string estado;
 
-		public Articulo(){
+		public ArticuloBE(){
 
 		}
 

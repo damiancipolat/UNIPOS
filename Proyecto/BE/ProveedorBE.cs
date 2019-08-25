@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Proveedor {
+	public class ProveedorBE {
 
         public int id;
         public string nombre;
@@ -12,7 +12,7 @@ namespace BE {
 		public string direccion;
 		public string estado;
 
-		public Proveedor(){
+		public ProveedorBE(){
 		}
 
 	}

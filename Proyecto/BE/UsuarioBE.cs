@@ -7,12 +7,11 @@ namespace BE {
 
     public enum UsuarioTipo
     {
-        Cliente = 'C',
-        Emplado = 'E'
+        Emplado = 1,
+        Cliente = 2        
     };
 
-
-    public class Usuario {
+    public class UsuarioBE {
 
         public int Id { get; set; }
         public string Document { get; set; }
@@ -21,8 +20,8 @@ namespace BE {
         public DateTime fecAlta { get; set; }
         public Boolean activo { get; set; }
 
-        public Usuario() { }
-        public Usuario(int id)
+        public UsuarioBE() { }
+        public UsuarioBE(int id)
         {
             this.Id = Id;
         }

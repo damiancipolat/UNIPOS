@@ -18,7 +18,7 @@ namespace DAL
         public SqlParameter CreateParameter(string name, SqlDbType type, object value)
         {
             SqlParameter newParam = new SqlParameter();
-            newParam.TypeName = name;
+            newParam.ParameterName = name;
             newParam.SqlDbType = type;
             newParam.Value = value;
 

@@ -275,7 +275,6 @@ CREATE TABLE [Sesion]
 )
 GO
 
-
 CREATE TABLE [Tipo_usuario]
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
@@ -294,8 +293,6 @@ CREATE TABLE [Usuario]
 )
 GO
 
-
-
 CREATE TABLE [Cliente]
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
@@ -303,18 +300,20 @@ CREATE TABLE [Cliente]
 	nombre varchar(100),
 	apellido varchar(100),
 	email varchar(100),
-	tel varchar(100)
+	tel varchar(100),
+	[activo] varchar(50) NULL
 )
 GO
 
 CREATE TABLE Empleado
 (
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
-	usuario_id varchar(20),
+	usuario_id bigint,
 	nombre varchar(100),
 	apellido varchar(100),
 	email varchar(100),
-	fec_nac varchar(100)
+	fec_nac varchar(100),
+	[activo] varchar(50) NULL
 )
 GO
 

@@ -7,3 +7,9 @@ C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.cs
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.exe
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\BE.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\DAL.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\BE.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\DAL.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.Form1.resources
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csproj.CopyComplete

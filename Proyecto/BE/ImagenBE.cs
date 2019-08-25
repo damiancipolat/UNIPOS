@@ -4,12 +4,12 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Imagen {
+	public class ImagenBE {
 
         public int id;
         public string archivo;
 
-        public Imagen()
+        public ImagenBE()
         {
 
         }

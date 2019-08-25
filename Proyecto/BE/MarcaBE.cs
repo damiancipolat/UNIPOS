@@ -4,14 +4,14 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Marca {
+	public class MarcaBE {
 
         public int id;
         public string Estado;
 		public string Nombre;
 		public string Web;
 
-		public Marca(){
+		public MarcaBE(){
 
 		}
 

@@ -43,8 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO.cs" />
+    <Compile Include="EmpleadoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE\BE.csproj">

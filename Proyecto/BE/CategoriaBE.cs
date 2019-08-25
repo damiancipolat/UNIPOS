@@ -4,13 +4,13 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Categoria{
+	public class CategoriaBE{
 
         public int id;
         public string descrip;
 		public string estado;		
 
-		public Categoria(){
+		public CategoriaBE(){
 
 		}
 

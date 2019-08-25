@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 
 namespace BE {
-	public class Color {
+	public class ColorBE {
 
         public int id;
         public string nombre;
@@ -15,7 +15,7 @@ namespace BE {
 		public string estado;					
 
 
-		public Color(){
+		public ColorBE(){
 
 		}
 
