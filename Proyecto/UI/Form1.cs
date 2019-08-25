@@ -33,18 +33,33 @@ namespace UI
             DAL.UsuarioDAL.Agregar(nuevo1);
             */
 
-            
+            /*
             BE.EmpleadoBE nuevo = new BE.EmpleadoBE();
-            nuevo.Id = 7;
-            nuevo.Nombre = "Kiki";
-            nuevo.Apellido = "Simpson";
+            nuevo.Document = "39295515";
+            nuevo.Password = "3629";
+            nuevo.Nombre = "Gordon";
+            nuevo.Apellido = "Shomwey";
             nuevo.Email = "aaaa@gmail.com";
             nuevo.FecNac = new DateTime(2019, 8, 24);
-            nuevo.parentId = 1;
+            nuevo.Document = "33295515";
+            nuevo.Password = "33295515";
 
             //DAL.EmpleadoDAL.Agregar(nuevo);
-            DAL.EmpleadoDAL.Actualizar(nuevo);
-            
+            //DAL.EmpleadoDAL.Actualizar(nuevo);
+            //DAL.EmpleadoDAL.Eliminar(nuevo);
+            */
+
+            BE.ClienteBE nuevo2 = new BE.ClienteBE();
+            nuevo2.Document = "39295515";
+            nuevo2.Password = "3629";
+            nuevo2.Nombre   = "Gordon";
+            nuevo2.Apellido = "Shomwey";
+            nuevo2.Email    = "aaaa@gmail.com";
+            nuevo2.Telefono = "1566587382";
+
+            //DAL.ClienteDAL.Agregar(nuevo2);
+            BE.ClienteBE tmp3 = DAL.ClienteDAL.Obtener(4);
+            MessageBox.Show(tmp3.Id.ToString()+" "+tmp3.Nombre+" "+tmp3.Apellido+" "+tmp3.Document+" "+tmp3.Email+" "+tmp3.Telefono);
 
             //BE.EmpleadoBE tmp2 = DAL.EmpleadoDAL.Obtener(1);
             //MessageBox.Show(tmp2.Id.ToString()+" "+tmp2.Nombre+" "+tmp2.Apellido+" "+tmp2.Document+" "+tmp2.Email+" "+tmp2.FecNac.ToString());

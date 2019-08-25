@@ -32,11 +32,12 @@ namespace DAL
             //Set class attributes.
             BE.EmpleadoBE mEmpleado = new BE.EmpleadoBE(userBase);
 
-            mEmpleado.Id = int.Parse(fila["id"].ToString());
-            mEmpleado.Nombre = fila["nombre"].ToString();
+            mEmpleado.Id       = int.Parse(fila["id"].ToString());
+            mEmpleado.Nombre   = fila["nombre"].ToString();
             mEmpleado.Apellido = fila["apellido"].ToString();
-            mEmpleado.Email = fila["email"].ToString();
-            mEmpleado.fecAlta = DateTime.Parse(fila["fec_nac"].ToString());
+            mEmpleado.Email    = fila["email"].ToString();
+            mEmpleado.fecAlta  = DateTime.Parse(fila["fec_nac"].ToString());
+            mEmpleado.activo   = Boolean.Parse(fila["activo"].ToString());
 
             return mEmpleado;
         }
@@ -50,16 +51,28 @@ namespace DAL
         
         public static int Agregar(BE.EmpleadoBE pEmpleado)
         {
-            string sql = "insert into empleado(usuario_id, nombre, apellido, email, fec_nac, activo) values(@userId, @name, @surname, @email, @fecNac,'true');";
-             DAO mDao = new DAO();
+            ///Creo su padre y lo guardo antes.
+            BE.UsuarioBE baseUser = new BE.UsuarioBE();
 
-             return mDao.ExecuteNonQueryWithParams(sql, new List<SqlParameter> {
+            baseUser.Document = pEmpleado.Document;
+            baseUser.Password = pEmpleado.Password;
+            baseUser.fecAlta  = DateTime.Now;
+            baseUser.tipo     = BE.UsuarioTipo.Emplado;
+            baseUser.activo   = true;
+
+            UsuarioDAL.Agregar(baseUser);
+
+            //Guardo el empleado.
+            string sql = "insert into empleado(usuario_id, nombre, apellido, email, fec_nac, activo) values(@userId, @name, @surname, @email, @fecNac,'true');";
+            DAO mDao   = new DAO();
+
+            return mDao.ExecuteNonQueryWithParams(sql, new List<SqlParameter> {
                  mDao.CreateParameter("userId", SqlDbType.Int,1),
                  mDao.CreateParameter("name", SqlDbType.VarChar,pEmpleado.Nombre),
                  mDao.CreateParameter("surname", SqlDbType.VarChar, pEmpleado.Apellido),
                  mDao.CreateParameter("email", SqlDbType.VarChar, pEmpleado.Email),
                  mDao.CreateParameter("fecNac", SqlDbType.DateTime, pEmpleado.FecNac)
-             });
+            });
             
         }
         
