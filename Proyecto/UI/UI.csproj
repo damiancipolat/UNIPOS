@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +84,10 @@
     <ProjectReference Include="..\BE\BE.csproj">
       <Project>{2031301d-7393-4221-929f-180a29ef4a08}</Project>
       <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{abc505bc-7572-4c3d-9b77-d7ae42570f3f}</Project>
+      <Name>BL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7c575cbe-b4b2-49e6-a0a3-9a3eba95d8b6}</Project>

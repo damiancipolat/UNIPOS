@@ -287,9 +287,16 @@ CREATE TABLE [Usuario]
 	Id bigint not NULL identity(1,1) PRIMARY KEY,
 	document varchar(20),
 	pwd varchar(100),
-	[tipo_usuario] bigint NULL,
-	[activo] varchar(50) NULL,
+	tipo bigint,
+	estado varchar(10),
 	fecha_alta datetime
+)
+GO
+
+CREATE TABLE Usuario_Estado
+(
+	cod varchar(10),
+	descrip varchar(100)
 )
 GO
 
@@ -300,8 +307,7 @@ CREATE TABLE [Cliente]
 	nombre varchar(100),
 	apellido varchar(100),
 	email varchar(100),
-	tel varchar(100),
-	[activo] varchar(50) NULL
+	tel varchar(100)
 )
 GO
 
@@ -312,8 +318,7 @@ CREATE TABLE Empleado
 	nombre varchar(100),
 	apellido varchar(100),
 	email varchar(100),
-	fec_nac varchar(100),
-	[activo] varchar(50) NULL
+	fec_nac varchar(100)
 )
 GO
 

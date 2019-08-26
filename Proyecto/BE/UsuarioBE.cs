@@ -11,15 +11,21 @@ namespace BE {
         Cliente = 2        
     };
 
+    public enum EstadoUsuario
+    {
+        Activo     = 'A',
+        Suspendido = 'S',
+        Baja       = 'B'
+    };
+
     public class UsuarioBE {
 
         public int Id { get; set; }
         public string Document { get; set; }
         public string Password { get; set; }
-        public UsuarioTipo tipo { get; set; }
-        public DateTime fecAlta { get; set; }
-        public Boolean activo { get; set; }
-
+        public EstadoUsuario Estado { get; set; }
+        public UsuarioTipo Tipo { get; set; }
+        public DateTime FecAlta { get; set; }
         public UsuarioBE() { }
         public UsuarioBE(int id)
         {

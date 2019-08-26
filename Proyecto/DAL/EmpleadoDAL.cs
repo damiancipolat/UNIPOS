@@ -36,8 +36,7 @@ namespace DAL
             mEmpleado.Nombre   = fila["nombre"].ToString();
             mEmpleado.Apellido = fila["apellido"].ToString();
             mEmpleado.Email    = fila["email"].ToString();
-            mEmpleado.fecAlta  = DateTime.Parse(fila["fec_nac"].ToString());
-            mEmpleado.activo   = Boolean.Parse(fila["activo"].ToString());
+            mEmpleado.FecAlta  = DateTime.Parse(fila["fec_nac"].ToString());
 
             return mEmpleado;
         }
@@ -56,9 +55,9 @@ namespace DAL
 
             baseUser.Document = pEmpleado.Document;
             baseUser.Password = pEmpleado.Password;
-            baseUser.fecAlta  = DateTime.Now;
-            baseUser.tipo     = BE.UsuarioTipo.Emplado;
-            baseUser.activo   = true;
+            baseUser.FecAlta  = DateTime.Now;
+            baseUser.Tipo     = BE.UsuarioTipo.Emplado;
+            baseUser.Estado   = BE.EstadoUsuario.Activo;
 
             UsuarioDAL.Agregar(baseUser);
 

@@ -4,3 +4,8 @@ C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\obj\Debug\BL.cs
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\obj\Debug\BL.dll
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\obj\Debug\BL.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\bin\Debug\BE.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\bin\Debug\DAL.dll
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\bin\Debug\BE.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\bin\Debug\DAL.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\BL\obj\Debug\BL.csproj.CopyComplete

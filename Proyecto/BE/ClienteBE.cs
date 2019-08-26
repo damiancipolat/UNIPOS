@@ -21,9 +21,9 @@ namespace BE
             base.Id = user.Id;
             base.Password = user.Password;
             base.Document = user.Document;
-            base.activo = user.activo;
-            base.fecAlta = user.fecAlta;
-            base.tipo = user.tipo;
+            base.Estado = user.Estado;
+            base.FecAlta = user.FecAlta;
+            base.Tipo = user.Tipo;
         }
     }
 }

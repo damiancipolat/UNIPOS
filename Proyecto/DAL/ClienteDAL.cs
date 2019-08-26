@@ -12,7 +12,7 @@ namespace DAL
     {
         public static BE.ClienteBE Obtener(int pId)
         {
-            string mCommandText = "select id,usuario_id,nombre,apellido,email,tel,activo from cliente where id=" + pId + ";";
+            string mCommandText = "select id,usuario_id,nombre,apellido,email,tel from cliente where id=" + pId + ";";
             DAO mDAO = new DAO();
 
             DataSet mDs = mDAO.ExecuteDataSet(mCommandText);
@@ -37,7 +37,6 @@ namespace DAL
             mCliente.Apellido = fila["apellido"].ToString();
             mCliente.Email    = fila["email"].ToString();
             mCliente.Telefono = fila["tel"].ToString();
-            mCliente.activo   = Boolean.Parse(fila["activo"].ToString());
 
             return mCliente;
         }
@@ -56,9 +55,9 @@ namespace DAL
 
             baseUser.Document = pCliente.Document;
             baseUser.Password = pCliente.Password;
-            baseUser.fecAlta  = DateTime.Now;
-            baseUser.tipo     = BE.UsuarioTipo.Cliente;
-            baseUser.activo   = true;
+            baseUser.FecAlta  = DateTime.Now;
+            baseUser.Tipo     = BE.UsuarioTipo.Cliente;
+            baseUser.Estado   = BE.EstadoUsuario.Activo;
 
             UsuarioDAL.Agregar(baseUser);
             
