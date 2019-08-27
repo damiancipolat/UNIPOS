@@ -100,14 +100,14 @@ namespace BL
         {
             BE.UsuarioBE loginUser = DAL.UsuarioDAL.Acceder(user, password);
 
-            //Si el login es incorrecto, sumo en uno los intentos.
+            //Si el login es exitoso, retorno el usuario.
             if (loginUser != null)
                 return loginUser;
 
             //Busco el usuario por nDoc.
             BE.UsuarioBE docUser = DAL.UsuarioDAL.ObtenerPorDoc(user);
             
-            //Si encuentro el usuario de ese documento incremento el contador de intentos.
+            //Si encuentro el usuario de ese documento intento aumentar el contador.
             if (docUser != null)
             {   
                 //Si supera los intentos lo bloqueo, sino incremento en 1.
@@ -116,14 +116,16 @@ namespace BL
                     //Seteo estado.
                     docUser.Estado = BE.EstadoUsuario.Suspendido;
 
-                    return docUser;
-                }                    
+                    throw new System.ArgumentException("LOGIN_ERROR_USER_BLOQ", "original");
+                }
                 else                    
                     docUser.Intentos++;
 
                 //Guardo el usuario.
                 Actualizar(docUser);
-                
+
+                throw new System.ArgumentException("LOGIN_ERROR", "original");
+
             }
 
             return null;

@@ -65,7 +65,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-5, 228);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 482);
+            this.panel1.Size = new System.Drawing.Size(575, 529);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -127,9 +127,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(85, 264);
+            this.button1.Location = new System.Drawing.Point(41, 259);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(403, 45);
+            this.button1.Size = new System.Drawing.Size(121, 45);
             this.button1.TabIndex = 6;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -141,24 +141,24 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(85, 330);
+            this.button2.Location = new System.Drawing.Point(363, 259);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(403, 45);
+            this.button2.Size = new System.Drawing.Size(179, 45);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Olvide mi contraseña";
+            this.button2.Text = "Olvide mi clave";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(84, 394);
+            this.button3.Location = new System.Drawing.Point(184, 259);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(403, 49);
+            this.button3.Size = new System.Drawing.Size(156, 45);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Registrarme como cliente";
+            this.button3.Text = "Registrarme";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // panel2
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 698);
+            this.ClientSize = new System.Drawing.Size(559, 562);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
