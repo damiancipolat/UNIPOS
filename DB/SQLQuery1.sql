@@ -289,7 +289,8 @@ CREATE TABLE [Usuario]
 	pwd varchar(100),
 	tipo bigint,
 	estado varchar(10),
-	fecha_alta datetime
+	fecha_alta datetime,
+	intentos int
 )
 GO
 

@@ -26,6 +26,7 @@ namespace BE {
         public EstadoUsuario Estado { get; set; }
         public UsuarioTipo Tipo { get; set; }
         public DateTime FecAlta { get; set; }
+        public int Intentos { get; set; }
         public UsuarioBE() { }
         public UsuarioBE(int id)
         {

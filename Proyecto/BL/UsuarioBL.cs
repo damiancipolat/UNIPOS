@@ -10,10 +10,9 @@ namespace BL
     public class UsuarioBL
     {
 
-        public static int Obtener(int pId)
+        public static BE.UsuarioBE Obtener(int pId)
         {
-            BE.UsuarioBE tmpUser = UsuarioDAL.Obtener(pId);
-            return 1;
+            return UsuarioDAL.Obtener(pId);
         }
 
         public static int Agregar(BE.UsuarioBE pUsuario)
@@ -27,18 +26,108 @@ namespace BL
 
         public static int Actualizar(BE.UsuarioBE pUsuario)
         {
-            return BL.UsuarioBL.Actualizar(pUsuario);
+            return DAL.UsuarioDAL.Actualizar(pUsuario);
         }
 
         public static int Eliminar(BE.UsuarioBE pUsuario)
         {
-            return BL.UsuarioBL.Eliminar(pUsuario);
+            return DAL.UsuarioDAL.Eliminar(pUsuario);
         }
 
-        public static int ResetPassword(int pId)
+        //Bloquea al usuario.
+        public static int Bloquear(int pId)
         {
-            BE.UsuarioBE newUser = Obtener(pId);
-            return 0;
+            BE.UsuarioBE getUser = DAL.UsuarioDAL.Obtener(pId);
+
+            if (getUser != null)
+            {
+                //Setea el estado a suspendido.
+                getUser.Estado = BE.EstadoUsuario.Suspendido;
+
+                //Actualizo en la bd.
+                return DAL.UsuarioDAL.Actualizar(getUser);
+            }
+            else
+            {
+                throw new Exception("Usuario no encontrado");
+            }
+        }
+
+        //Desbloquea al usuario.
+        public static int Desbloquear(int pId)
+        {
+            BE.UsuarioBE getUser = DAL.UsuarioDAL.Obtener(pId);
+
+            if (getUser != null)
+            {
+                //Setea el estado a suspendido.
+                getUser.Estado = BE.EstadoUsuario.Activo;
+
+                //Actualizo en la bd.
+                return DAL.UsuarioDAL.Actualizar(getUser);
+            }
+            else
+            {
+                throw new Exception("Usuario no encontrado");
+            }
+        }
+        
+        //Blanquea la password de un usuario seteando otra.
+        public static int ResetPassword(int pId)
+        {            
+            BE.UsuarioBE getUser = DAL.UsuarioDAL.Obtener(pId);
+
+            if (getUser != null)
+            {
+                
+                //Genero un password aleatorio.
+                string pwd = BL.Password.RandomPassword();
+
+                //Guardo el password encriptado.
+                getUser.Password = BL.Cripto.GetHash(pwd);
+
+                //Actualizo en la bd.
+                return DAL.UsuarioDAL.Actualizar(getUser);
+            }
+            else
+            {
+                throw new Exception("Usuario no encontrado");
+            }
+        }
+
+        //Acceder
+        public static BE.UsuarioBE Acceder(string user, string password)
+        {
+            BE.UsuarioBE loginUser = DAL.UsuarioDAL.Acceder(user, password);
+
+            //Si el login es incorrecto, sumo en uno los intentos.
+            if (loginUser != null)
+                return loginUser;
+
+            //Busco el usuario por nDoc.
+            BE.UsuarioBE docUser = DAL.UsuarioDAL.ObtenerPorDoc(user);
+            
+            //Si encuentro el usuario de ese documento incremento el contador de intentos.
+            if (docUser != null)
+            {   
+                //Si supera los intentos lo bloqueo, sino incremento en 1.
+                if (docUser.Intentos >= 3)
+                {
+                    //Seteo estado.
+                    docUser.Estado = BE.EstadoUsuario.Suspendido;
+
+                    return docUser;
+                }                    
+                else                    
+                    docUser.Intentos++;
+
+                //Guardo el usuario.
+                Actualizar(docUser);
+                
+            }
+
+            return null;
+
         }
     }
 }

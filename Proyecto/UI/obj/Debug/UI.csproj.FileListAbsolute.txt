@@ -15,3 +15,4 @@ C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.Fo
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\BL.dll
 C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\bin\Debug\BL.pdb
+C:\Users\54116\Desktop\UAI\Trabajo de diploma\UNIPOS\Proyecto\UI\obj\Debug\UI.Form2.resources

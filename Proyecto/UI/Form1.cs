@@ -21,6 +21,11 @@ namespace UI
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            BE.UsuarioBE tmp = DAL.UsuarioDAL.Obtener(1);
+            tmp.Document = "33295514";
+            MessageBox.Show(tmp.Id.ToString()+ " " + tmp.Document + " " + tmp.Password + " " + tmp.Tipo+""+tmp.Estado + " " + tmp.FecAlta.ToString());
+
+            DAL.UsuarioDAL.Actualizar(tmp);
             /*
             BE.UsuarioBE nuevo1 = new BE.UsuarioBE();
             nuevo1.Document = "332955150";
@@ -30,10 +35,6 @@ namespace UI
             nuevo1.FecAlta = new DateTime(2019, 8, 24);
             BL.UsuarioBL.Agregar(nuevo1);
             */
-
-
-            //BE.UsuarioBE tmp = DAL.UsuarioDAL.Obtener(1);
-            //MessageBox.Show(tmp.Id.ToString()+ " " + tmp.Document + " " + tmp.Password + " " + tmp.Tipo+""+tmp.Estado + " " + tmp.FecAlta.ToString());
 
             /*
             BE.UsuarioBE nuevo1 = new BE.UsuarioBE();
@@ -107,12 +108,39 @@ namespace UI
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            BE.UsuarioBE user = DAL.UsuarioDAL.Acceder("33291510", "1234");
+            BE.UsuarioBE user = BL.UsuarioBL.Acceder("33295215", "0000");
 
             if (user != null)
-                Console.WriteLine(user.Document);            
+                MessageBox.Show(user.Document);
             else
-                Console.WriteLine("Not found");
+                MessageBox.Show("Not found");
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            BL.UsuarioBL.ResetPassword(1);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            BL.UsuarioBL.Bloquear(1);
+
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            BL.UsuarioBL.Desbloquear(1);
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
         }
     }
 }

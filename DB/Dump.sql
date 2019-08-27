@@ -39,18 +39,23 @@ drop table usuario_estado;
 drop table cliente;
 drop table empleado;
 
+insert into tipo_usuario(descrip) values('Empleado');
+insert into tipo_usuario(descrip) values('Cliente');
+
 insert into usuario_estado(cod,descrip) values('A','Activo');
 insert into usuario_estado(cod,descrip) values('S','Suspendido');
 insert into usuario_estado(cod,descrip) values('B','Baja');
 
-insert into usuario(document,pwd,tipo,estado,fecha_alta) values('33295215','123',1,'A',getdate());
-insert into usuario(document,pwd,tipo,estado,fecha_alta) values('33291315','123',1,'A',getdate());
-insert into usuario(document,pwd,tipo,estado,fecha_alta) values('33291510','1234',1,'A',getdate());
+insert into usuario(document,pwd,tipo,estado,fecha_alta,intentos) values('33295215','123',1,'A',getdate(),0);
+insert into usuario(document,pwd,tipo,estado,fecha_alta,intentos) values('33291315','123',1,'A',getdate(),0);
+insert into usuario(document,pwd,tipo,estado,fecha_alta,intentos) values('33291510','1234',1,'A',getdate(),0);
 
 insert into cliente(usuario_id,nombre,apellido,email,tel) values(1,'Pepe','Felini','Pepe@gmial.com','1566587382');
 insert into cliente(usuario_id,nombre,apellido,email,tel) values(2,'Pepe','Felini','Pepe@gmial.com','1566587382');
 insert into cliente(usuario_id,nombre,apellido,email,tel) values(3,'Pepe','Felini','Pepe@gmial.com','1566587382');
 
+select * from tipo_usuario;
 select * from usuario;
 select * from usuario_estado;
 select * from cliente;
+select * from empleado;
